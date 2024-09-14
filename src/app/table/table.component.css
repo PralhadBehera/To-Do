@@ -1,0 +1,12 @@
+.card-header {
+    border-bottom: 0; /* Removes the bottom border of the header */
+  }
+  .card-body {
+    border-bottom: 0; /* Removes the bottom border of the body */
+  }
+  .card-footer {
+    border-top: 0; /* Removes the top border of the footer */
+  }
+  .card {
+    border: 1px solid #ddd; /* Optional: Add a border around the card if needed */
+  }

@@ -1,0 +1,17 @@
+.inline-container {
+    display: flex;
+    align-items: center;
+  }
+  .inline-container img {
+    margin: 0 5px; /* Optional: Adds spacing between images and text */
+  }
+
+.first-img {
+    margin-left: 10 px; /* Move the first image slightly to the left */
+  }
+
+  
+.second-img {
+    margin-left: 60 px; /* Move the first image slightly to the left */
+  }
+

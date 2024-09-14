@@ -1,0 +1,10 @@
+.form-container {
+    max-width: 500px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the form container */
+  }
+  .input-group {
+    border-radius: 25px; /* Apply rounded corners to the entire input group */
+  }
+  .form-control, .btn {
+    border-radius: 25px; /* Apply rounded corners to input and button */
+  }
