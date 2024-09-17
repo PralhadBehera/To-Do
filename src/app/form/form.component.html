@@ -1,9 +1,25 @@
 <div class="form-container">
   <form (ngSubmit)="onSubmit()" #myForm="ngForm">
     <div class="input-group">
-      <!-- <input type="text" class="form-control" placeholder="Enter text here" [(ngModel)]="inputText" [ngModelOptions]="{standalone: true}" style="background-color: #e3e2e5;"> -->
-      <input type="text" class="form-control" placeholder="Enter text here" [(ngModel)]="inputText" name="inputText" style="background-color: #e3e2e5;">
-      <button class="btn btn-primary px-4" type="submit" style="background-color: #FF5733; border: none;">Add</button>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter text here"
+        [(ngModel)]="inputText" 
+        name="inputText"
+        style="background-color: #e3e2e5;"
+        required
+      />
+      <button
+        class="btn btn-primary px-4"
+        type="submit"
+        style="background-color: #FF5733; border: none;"
+        [disabled]="!myForm.form.valid"
+      >
+        Add
+      </button>
     </div>
   </form>
+
+  <app-list [items]="items" (itemSelected)="handleItemSelected($event)"></app-list>
 </div>

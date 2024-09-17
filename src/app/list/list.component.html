@@ -1,18 +1,25 @@
-<div class="container">
-    <div class="inline-container">
-      <img width="30"  class="first-img" height="30" src="https://img.icons8.com/color/48/checked--v1.png" alt="checked--v1">
-      <p class="mb-0">Meditation!</p>
-      <img width="30" height="30" src="https://img.icons8.com/ios/50/multiply.png" alt="multiply"/>
-    </div>
-    <div class="row">
+
+
+  <div class="container">
+    <h6 *ngIf="items.length > 0" class="fw-bold mt-3">Task</h6>
+    
+    <div *ngFor="let item of items; let i = index" class="row">
       <div class="col-2">
-        <img width="30"  class="first-img" height="30" src="https://img.icons8.com/color/48/checked--v1.png" alt="checked--v1">
+        <img width="30" class="first-img" height="30"  (click)="selectItem(item)" src="https://img.icons8.com/color/48/checked--v1.png" alt="checked--v1">
       </div>
       <div class="col-8">
-        Meditation!
+        {{ item | titlecase }}
       </div>
       <div class="col-2">
-        <img width="30" height="30" src="https://img.icons8.com/ios/50/multiply.png" alt="multiply"/>
+        <img 
+          width="30" 
+          height="30" 
+          src="https://img.icons8.com/ios/50/multiply.png" 
+          alt="multiply"
+          (click)="removeItem(i)"
+        
+        />
       </div>
     </div>
   </div>
+   
